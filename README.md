@@ -1,4 +1,4 @@
-# AutoExec
+# SetTeam
 
 Forcefully switch players to join a team
 
