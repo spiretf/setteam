@@ -57,6 +57,7 @@ public Action:SetTeam(args) {
 
     int client = FindTarget(0, player, false, true);
 
+    force_team[client] = 0;
     ChangeClientTeam(client, team);
 
     return Plugin_Handled;
