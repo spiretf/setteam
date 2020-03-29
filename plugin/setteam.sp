@@ -17,6 +17,7 @@ public OnPluginStart() {
 	RegServerCmd("sm_forceteam", ForceExec, "Set a players team and keep them there");
 
 	AddCommandListener(Command_JoinTeam, "jointeam");
+	AddCommandListener(Command_JoinTeam, "autoteam");
 }
 
 int parse_team(const char[] team_str) {
@@ -97,4 +98,12 @@ public Action:Command_JoinTeam(client, const String:command[], argc) {
     } else {
         return Plugin_Continue;
     }
+}
+
+public void OnClientConnected(client) {
+    force_team[client] = 0;
+}
+
+public void OnClientDisconnect(client) {
+    force_team[client] = 0;
 }
