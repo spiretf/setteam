@@ -107,3 +107,9 @@ public void OnClientConnected(client) {
 public void OnClientDisconnect(client) {
     force_team[client] = 0;
 }
+
+public OnMapStart() {
+	for (int i = 0; i < MAXPLAYERS; i++) {
+	    force_team[i] = 0;
+	}
+}
