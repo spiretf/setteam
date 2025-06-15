@@ -1,3 +1,5 @@
+# Moved to https://codeberg.org/spire/setteam
+
 # SetTeam
 
 Forcefully switch players to join a team
